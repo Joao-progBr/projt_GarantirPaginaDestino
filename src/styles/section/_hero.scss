@@ -1,0 +1,52 @@
+@use '../vars';
+
+.hero{
+    background-color: vars.$colorDarkVioletBlue;
+    height: 740px;
+    position: relative;
+    
+    &__landing{
+        
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        background-image: url('../../../build/img/bg-pattern-intro-right-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 0 ;
+        right: 0;
+        z-index: 5;
+        // background-color: red;
+        height: 45rem;
+        width: 32rem;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__about{
+        max-width: 700px;
+        width: 100%;
+        
+
+        h1{
+
+        }
+    }
+
+    &__introImg{
+        // position: absolute;
+        // bottom: 0;
+        // width: 100%;
+        transform:translateY(20%);
+        
+        img{
+            width: 100%;
+        }
+    }
+}
+

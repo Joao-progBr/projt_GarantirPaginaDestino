@@ -1,0 +1,38 @@
+//color
+$colorDarkVioletBlue:hsl(256, 26%, 20%) ;
+$colorSteelBlueLight:hsl(216, 30%, 68%);
+$colorRaisinBlack:hsl(273, 4%, 51%);
+$colorDarkGrayishPurple:hsl(273, 4%, 51%);
+$colorOffWhite:hsl(0, 0%, 98%);
+$colorBlack:hsl(0, 0%, 0%);
+// $colorWhite
+
+
+
+//fonts
+// .dm-serif-display-regular {
+//   font-family: "DM Serif Display", serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .karla-<uniquifier> {
+//   font-family: "Karla", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: 400 ou 700;
+//   font-style: normal;
+// }
+
+@mixin fontDmSerif($size: 16px){
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: $size;
+}
+
+@mixin fontKarla($size: 16px, $weight:400){
+    font-family: "Karla", sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: $size;
+}

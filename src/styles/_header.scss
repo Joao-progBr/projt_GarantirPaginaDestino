@@ -1,0 +1,56 @@
+@use 'vars';
+
+.header{
+    padding: 2em;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav{
+        
+        &__list{
+            display: flex;
+            gap: 2.5em;
+            align-items: center;
+
+            li{
+                cursor: pointer;
+
+                a{
+                    color: vars.$colorDarkGrayishPurple;
+                    text-transform: uppercase;
+                    @include vars.fontKarla(16px, 700);
+                    letter-spacing: 2px;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+
+                    &:hover{
+                        color: vars.$colorDarkVioletBlue;
+                    }
+                    
+                }
+
+                &:nth-last-child(1){
+                    border: 2px solid black;
+                    padding: 1em 2em;
+                    transition: background-color 0.3s ease, color 0.3s ease;
+                    
+                    a{
+                        color: vars.$colorBlack ;
+                    }
+                }
+
+                &:nth-last-child(1):hover{
+                    background-color: vars.$colorBlack;
+
+                    a{
+                        color: vars.$colorOffWhite;
+                    }
+                }
+            }
+        }
+    }
+}
+
