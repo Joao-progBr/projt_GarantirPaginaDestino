@@ -1,6 +1,7 @@
 @use 'vars';
 @use 'header';
 @use './section/hero';
+@use './section/difference';
 
 
 @use './responsive';
@@ -29,5 +30,8 @@ ul li{
     list-style: none;
 }
 
+section{
+    margin-bottom: 25em;
+}
 
 
