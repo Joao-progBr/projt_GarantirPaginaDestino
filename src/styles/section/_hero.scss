@@ -2,51 +2,72 @@
 
 .hero{
     background-color: vars.$colorDarkVioletBlue;
-    height: 740px;
+    height: 650px;
     position: relative;
-    
-    &__landing{
-        
-    }
-    &::after{
-        content: '';
+
+    &__patternLeft{
         position: absolute;
-        background-image: url('../../../build/img/bg-pattern-intro-right-desktop.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        top: 0 ;
+        top: 75%;
+        left: 0;
+    }
+    
+    &__patternRight{
+        position: absolute;
+        top: 0;
         right: 0;
-        z-index: 5;
-        // background-color: red;
-        height: 45rem;
-        width: 32rem;
+    }
+    
+    &__container{
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        gap: 3em;
     }
 
     &__container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-basis: 100%;
     }
 
     &__about{
-        max-width: 700px;
-        width: 100%;
+        color: vars.$colorOffWhite;
         
-
         h1{
+            @include vars.fontDmSerif(4.7em);
+            max-width:700px;
+            line-height: 0.8em;
 
+            &::before{
+                content: '';
+                width: 150px;
+                height: 1px;
+                background-color: vars.$colorOffWhite;
+                position: absolute;
+                top: 16%;
+            }
+        }
+        
+        p{
+            margin: 1.6em 0 3em;
+            line-height: 1.5rem;
+        }
+
+        a{
+            @include vars.btn(vars.$colorOffWhite);
+            color: vars.$colorOffWhite;
+            text-transform: uppercase;
+            
+            &:hover{
+                background-color: vars.$colorBlack;
+                border-color: vars.$colorBlack;
+            }
         }
     }
 
     &__introImg{
-        // position: absolute;
-        // bottom: 0;
-        // width: 100%;
-        transform:translateY(20%);
-        
-        img{
-            width: 100%;
-        }
+        transform: translateY(15%);
     }
 }
+
+
+
 

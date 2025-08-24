@@ -23,16 +23,24 @@ $colorBlack:hsl(0, 0%, 0%);
 //   font-style: normal;
 // }
 
-@mixin fontDmSerif($size: 16px){
+@mixin fontDmSerif($size: 1em){
     font-family: "DM Serif Display", serif;
     font-weight: 400;
     font-style: normal;
     font-size: $size;
 }
 
-@mixin fontKarla($size: 16px, $weight:400){
+@mixin fontKarla($size: 1em, $weight:400){
     font-family: "Karla", sans-serif;
     font-weight: $weight;
     font-style: normal;
     font-size: $size;
+}
+
+@mixin btn($borderColor: black){
+    border: 2px solid $borderColor;
+    padding: 1em 2em;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    letter-spacing: 2px;
+    cursor: pointer;
 }

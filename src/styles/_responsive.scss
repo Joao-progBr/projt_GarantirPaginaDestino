@@ -1,0 +1,45 @@
+@media (max-width: 1400px){
+    body .container{
+        width: 90%;
+    }
+
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// mobile
+@media (max-width: 900px){
+    .header{
+
+
+        .menu-hamburguer{
+            display: block;
+        }
+
+        .nav{
+            display: none;
+
+            &__list{
+                
+            }
+        }
+
+    }
+}

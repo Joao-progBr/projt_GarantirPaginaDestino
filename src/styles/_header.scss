@@ -9,6 +9,10 @@
         align-items: center;
     }
 
+    .menu-hamburguer{
+        display: none;
+    }
+
     .nav{
         
         &__list{
@@ -23,19 +27,15 @@
                     color: vars.$colorDarkGrayishPurple;
                     text-transform: uppercase;
                     @include vars.fontKarla(16px, 700);
-                    letter-spacing: 2px;
                     transition: background-color 0.3s ease, color 0.3s ease;
 
                     &:hover{
                         color: vars.$colorDarkVioletBlue;
                     }
-                    
                 }
 
                 &:nth-last-child(1){
-                    border: 2px solid black;
-                    padding: 1em 2em;
-                    transition: background-color 0.3s ease, color 0.3s ease;
+                    @include vars.btn();
                     
                     a{
                         color: vars.$colorBlack ;
