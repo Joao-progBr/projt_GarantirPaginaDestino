@@ -1,16 +1,37 @@
 @use '../vars';
 
 .difference{
+    position: relative;
 
     h2{
         @include vars.fontDmSerif(4.7em);
+        margin-bottom: 1em;
+
+        &::before{
+                content: '';
+                width: 150px;
+                height: 1px;
+                background-color: vars.$colorRaisinBlack;
+                position: absolute;
+                top: -15%;
+            }
     }
+
     &__container{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         grid-template-rows: auto;
         gap: 2em;
+
+        h3{
+            margin: 1em 0 .5em;
+            @include vars.fontDmSerif(1.7em);
+        }   
+
+        p{
+           color: vars.$colorRaisinBlack;
+        }
     }
 }
 
