@@ -1,0 +1,19 @@
+@use './vars';
+
+.footer{
+    position: relative;
+    background-color:vars.$colorDarkGrayishPurple ;
+
+    &::before{
+        content: '';
+        background-image: url('../../build/img/bg-pattern-footer-desktop.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: left;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

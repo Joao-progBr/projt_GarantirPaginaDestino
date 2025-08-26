@@ -37,8 +37,10 @@ $colorBlack:hsl(0, 0%, 0%);
     font-size: $size;
 }
 
-@mixin btn($borderColor: black){
+@mixin btn($borderColor: black, $color: black, $backgroundColor: transparent){
     border: 2px solid $borderColor;
+    color: $color;
+    background-color: $backgroundColor;
     padding: 1em 2em;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     letter-spacing: 2px;
