@@ -3,8 +3,6 @@
 .difference{
     position: relative;
 
-    
-
     h2{
         @include vars.fontDmSerif(4.7em);
         margin-bottom: 1em;
@@ -32,7 +30,7 @@
         }   
 
         p{
-           color: vars.$colorRaisinBlack;
+           color: vars.$colorDarkGrayishPurple;
         }
     }
 

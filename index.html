@@ -61,15 +61,26 @@
                             View plans
                         </a>
                     </div>
-                    <div class="hero__introImg">
+                    <picture class="hero__introImg">
+                        <source media="(max-width: 700px)" srcset="./build/img/image-intro-mobile.jpg">
+                        <!-- <source media="(min-width: 701px)" srcset="./build/img/image-intro-desktop.jpg"> -->
                         <img src="./build/img/image-intro-desktop.jpg" alt="image intro">
-                    </div>
+                    </picture>
+                    <!-- <div class="hero__introImg">
+                        <img src="./build/img/image-intro-desktop.jpg" alt="image intro">
+                    </div> -->
                 </div>
             </div>
-            <img class="hero__patternLeft" src="./build/img/bg-pattern-intro-left-desktop.svg"
-                alt="bg-pattern-intro-left-desktop">
-            <img class="hero__patternRight" src="./build/img/bg-pattern-intro-right-desktop.svg"
-                alt="bg-pattern-intro-right-desktop">
+            <!-- <picture class="hero__patternLeft">
+                <source media="(max-width: 1000px)" srcset="./build/img/bg-pattern-intro-left-mobile.svg">
+                <source media="(min-width: 1001px)" srcset="./build/img/bg-pattern-intro-left-desktop.svg">
+                <img src="./build/img/bg-pattern-intro-left-desktop.svg" alt="bg-pattern-intro-left-desktop">
+            </picture>
+            <picture class="hero__patternRight">
+                <source media="(max-width: 1000px)" srcset="./build/img/bg-pattern-intro-right-mobile.svg">
+                <source media="(min-width: 1001px)" srcset="./build/img/bg-pattern-intro-right-desktop.svg">
+                <img src="./build/img/bg-pattern-intro-right-desktop.svg" alt="bg-pattern-intro-right-desktop">
+            </picture> -->
         </section>
 
         <section class="difference">

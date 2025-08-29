@@ -5,15 +5,29 @@
     height: 650px;
     position: relative;
 
-    &__patternLeft{
+    &::after{
+        content: '';
+        background-image: url('../../../build/img/bg-pattern-intro-right-desktop.svg');
+        width: 100%;
+        height: 600px;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
         position: absolute;
-        top: 75%;
+        top: 0;
         left: 0;
     }
     
-    &__patternRight{
+    &::before{
+       content: '';
+        background-image: url('../../../build/img/bg-pattern-intro-left-desktop.svg');
+        width: 100%;
+        height: 600px;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
         position: absolute;
-        top: 0;
+        top: 70%;
         right: 0;
     }
     
@@ -48,7 +62,7 @@
         
         p{
             margin: 1.6em 0 3em;
-            color: vars.$colorRaisinBlack;
+            color: vars.$colorOffWhite;
         }
 
         a{
