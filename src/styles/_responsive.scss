@@ -62,7 +62,7 @@
             
             p{
                 text-align: center;
-                margin: 1.6em 0 3em;
+                margin: 1.6em 0 6em;
                 color: inherit;
             }
 
@@ -70,6 +70,7 @@
                 @include vars.btn(vars.$colorBlack);
                 color: vars.$colorBlack;
                 text-transform: uppercase;
+                z-index: 999;
                 
                 &:hover{
                     background-color: vars.$colorBlack;
@@ -104,7 +105,6 @@
             }
         }
     }
-
 }
 
 
@@ -128,9 +128,9 @@
 @media (max-width: 900px){
     .header{
 
-
         .menu-hamburguer{
             display: block;
+            cursor: pointer;
         }
 
         .nav{
@@ -149,6 +149,218 @@
 
 
 @media (max-width: 700px){
+
+    main .container{
+        width: 100%;
+    }
+
+    .hero{
+        flex-direction: column-reverse;
+        height: auto;
+        margin-bottom: 15em;
+
+        
+        &::after{
+            content: '';
+            background-image: url('../../../build/img/bg-pattern-intro-right-mobile.svg');
+            width: 100%;
+            height: 400px;
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 85%;
+            left: 0;
+        }
+    
+        &::before{
+            content: '';
+            background-image: url('../../../build/img/bg-pattern-intro-left-mobile.svg');
+            width: 100%;
+            height: 15rem;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 40%;
+            right: 0;
+        }
+
+        &__about{
+            width: 90%;
+            color: vars.$colorOffWhite;
+        
+            h1{
+                @include vars.fontDmSerif(3em);
+                max-width:600px;
+                line-height: 0.8em;
+
+                &::before{
+                    content: '';
+                    width: 150px;
+                    height: 1px;
+                    background-color: vars.$colorOffWhite;
+                    position: absolute;
+                    top: 16%;
+                }
+            }
+        
+            p{
+                margin: 1.6em 0 3em;
+                color: vars.$colorOffWhite;
+            }
+
+            a{
+                @include vars.btn(vars.$colorOffWhite);
+                color: vars.$colorOffWhite;
+                text-transform: uppercase;
+                z-index: 15;
+                
+                &:hover{
+                    background-color: vars.$colorBlack;
+                    border-color: vars.$colorBlack;
+                }
+            }
+        }
+
+        &__introImg{
+            transform: translateY(0%);
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+
+
+
+    .difference{
+        position: relative;
+        h2{
+            @include vars.fontDmSerif(3em);
+            margin-bottom: 1em;
+
+            &::before{
+                display: block;
+                
+                content: '';
+                width: 150px;
+                height: 1px;
+                background-color: vars.$colorRaisinBlack;
+                position: absolute;
+                top: -5%;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 7;
+            }
+        }
+
+        &__howWork{
+            flex-direction: column;
+            padding: 3em 2em;
+            margin-top: 10em;
+            background-color: vars.$colorDarkVioletBlue;
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-position: right;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url('../../../build/img/bg-pattern-how-we-work-mobile.svg');
+            }
+            
+            h3{
+                @include vars.fontDmSerif(3em);
+                color: vars.$colorOffWhite;
+                max-width: 500px;
+                z-index: 1;
+            }
+
+            a{
+                @include vars.btn(vars.$colorOffWhite, vars.$colorOffWhite );
+                text-transform: uppercase;
+                z-index: 1;
+
+                &:hover{
+                    @include vars.btn(vars.$colorOffWhite, vars.$colorBlack, vars.$colorOffWhite);
+                }
+            }
+        }
+    }
+
+
+
+
+    .footer{
+        position: relative;
+        background-color:vars.$colorOffWhite ;
+        padding: 4em;
+
+        &::before{
+            content: '';
+            background-image: url('../../build/img/bg-pattern-footer-mobile.svg');
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &__links{
+            flex-direction: column;
+            gap: 1em;
+            
+        }
+        &__socialLinks{
+            z-index: 5;
+            display: flex;
+            gap: 0.5em;
+            cursor: pointer;
+
+            a:hover{
+                filter: brightness(0) saturate(100%);
+            }
+        }
+        
+        
+        &__othersLinks{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-rows: auto;
+            font-weight: bold;
+            
+            p{
+                margin: 2em 0;
+                text-transform: uppercase;
+                color: vars.$colorDarkGrayishPurple;
+            }
+
+            ul li{
+                margin-bottom: .8em;
+
+                a{
+                    color:vars.$colorRaisinBlack ;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
 
 
 }

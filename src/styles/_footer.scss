@@ -5,7 +5,12 @@
     background-color:vars.$colorOffWhite ;
     padding: 4em;
 
-    &__logo{
+    &::before{
+        content: '';
+        background-image: url('../../build/img/bg-pattern-footer-desktop.svg');
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
         position: absolute;
         top: 0;
         left: 0;
